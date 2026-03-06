@@ -1,0 +1,276 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ============================================================ -->
+    <!-- LABEL: CLASS DIAGRAM -->
+    <!-- ============================================================ -->
+    <mxCell id="label_class" value="📘 DIAGRAMA DE CLASES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1e3a5f;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="360" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CLASS: Student -->
+    <!-- ============================================================ -->
+    <!-- Header -->
+    <mxCell id="c_student_h" value="Student" style="swimlane;startSize=30;fontStyle=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1e3a5f;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="220" height="230" as="geometry" />
+    </mxCell>
+    <!-- Attributes -->
+    <mxCell id="c_student_a" value="- id : int&#xa;- firstName : String&#xa;- lastName : String&#xa;- email : String&#xa;- status : boolean" style="text;strokeColor=none;fillColor=#eff8ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_student_h">
+      <mxGeometry x="0" y="30" width="220" height="90" as="geometry" />
+    </mxCell>
+    <!-- Divider -->
+    <mxCell id="c_student_d" value="" style="line;strokeColor=#6c8ebf;" vertex="1" parent="c_student_h">
+      <mxGeometry x="0" y="120" width="220" height="10" as="geometry" />
+    </mxCell>
+    <!-- Methods -->
+    <mxCell id="c_student_m" value="+ printInformation() : void&#xa;+ deleteStudent() : boolean&#xa;+ modifyStudent(firstName, lastName,&#xa;   email, status) : boolean" style="text;strokeColor=none;fillColor=#eff8ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_student_h">
+      <mxGeometry x="0" y="130" width="220" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CLASS: Professor -->
+    <!-- ============================================================ -->
+    <mxCell id="c_prof_h" value="Professor" style="swimlane;startSize=30;fontStyle=1;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a3d1a;align=center;" vertex="1" parent="1">
+      <mxGeometry x="300" y="80" width="230" height="250" as="geometry" />
+    </mxCell>
+    <mxCell id="c_prof_a" value="- id : int&#xa;- firstName : String&#xa;- lastName : String&#xa;- email : String&#xa;- specialty : String&#xa;- status : boolean" style="text;strokeColor=none;fillColor=#f0faf0;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_prof_h">
+      <mxGeometry x="0" y="30" width="230" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="c_prof_d" value="" style="line;strokeColor=#82b366;" vertex="1" parent="c_prof_h">
+      <mxGeometry x="0" y="130" width="230" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="c_prof_m" value="+ printInformation() : void&#xa;+ addProfessor(...) : boolean&#xa;+ modifyProfessor(...) : boolean&#xa;+ deleteProfessor() : boolean" style="text;strokeColor=none;fillColor=#f0faf0;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_prof_h">
+      <mxGeometry x="0" y="140" width="230" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CLASS: School -->
+    <!-- ============================================================ -->
+    <mxCell id="c_school_h" value="School" style="swimlane;startSize=30;fontStyle=1;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#3d2e00;align=center;" vertex="1" parent="1">
+      <mxGeometry x="570" y="80" width="220" height="230" as="geometry" />
+    </mxCell>
+    <mxCell id="c_school_a" value="- id : int&#xa;- name : String&#xa;- director : String" style="text;strokeColor=none;fillColor=#fffef0;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_school_h">
+      <mxGeometry x="0" y="30" width="220" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="c_school_d" value="" style="line;strokeColor=#d6b656;" vertex="1" parent="c_school_h">
+      <mxGeometry x="0" y="90" width="220" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="c_school_m" value="+ printInformation() : void&#xa;+ addSchool(id, name, director) : boolean&#xa;+ modifySchool(name, director) : boolean&#xa;+ deleteSchool() : boolean" style="text;strokeColor=none;fillColor=#fffef0;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_school_h">
+      <mxGeometry x="0" y="100" width="220" height="120" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CLASS: Classroom -->
+    <!-- ============================================================ -->
+    <mxCell id="c_class_h" value="Classroom" style="swimlane;startSize=30;fontStyle=1;fontSize=13;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#3d0000;align=center;" vertex="1" parent="1">
+      <mxGeometry x="830" y="80" width="220" height="210" as="geometry" />
+    </mxCell>
+    <mxCell id="c_class_a" value="- id : int&#xa;- roomNumber : int&#xa;- floor : int&#xa;- capacity : int&#xa;- status : boolean" style="text;strokeColor=none;fillColor=#fff5f5;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_class_h">
+      <mxGeometry x="0" y="30" width="220" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="c_class_d" value="" style="line;strokeColor=#b85450;" vertex="1" parent="c_class_h">
+      <mxGeometry x="0" y="120" width="220" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="c_class_m" value="+ printInformation() : void" style="text;strokeColor=none;fillColor=#fff5f5;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_class_h">
+      <mxGeometry x="0" y="130" width="220" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CLASS: Course -->
+    <!-- ============================================================ -->
+    <mxCell id="c_course_h" value="Course" style="swimlane;startSize=30;fontStyle=1;fontSize=13;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#2d0045;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="370" width="250" height="250" as="geometry" />
+    </mxCell>
+    <mxCell id="c_course_a" value="- id : int&#xa;- name : String&#xa;- programName : String&#xa;- school : School&#xa;- professor : Professor&#xa;- startDate : LocalDate&#xa;- endDate : LocalDate" style="text;strokeColor=none;fillColor=#f9f5ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_course_h">
+      <mxGeometry x="0" y="30" width="250" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="c_course_d" value="" style="line;strokeColor=#9673a6;" vertex="1" parent="c_course_h">
+      <mxGeometry x="0" y="150" width="250" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="c_course_m" value="+ printInformation() : void" style="text;strokeColor=none;fillColor=#f9f5ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_course_h">
+      <mxGeometry x="0" y="160" width="250" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CLASS: Enrollment -->
+    <!-- ============================================================ -->
+    <mxCell id="c_enroll_h" value="Enrollment" style="swimlane;startSize=30;fontStyle=1;fontSize=13;fillColor=#f0e6ff;strokeColor=#6f42c1;fontColor=#2d0060;align=center;" vertex="1" parent="1">
+      <mxGeometry x="340" y="370" width="250" height="260" as="geometry" />
+    </mxCell>
+    <mxCell id="c_enroll_a" value="- id : int&#xa;- enrollmentDate : LocalDate&#xa;- student : Student&#xa;- course : Course&#xa;- classroom : Classroom&#xa;- status : boolean" style="text;strokeColor=none;fillColor=#faf5ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_enroll_h">
+      <mxGeometry x="0" y="30" width="250" height="110" as="geometry" />
+    </mxCell>
+    <mxCell id="c_enroll_d" value="" style="line;strokeColor=#6f42c1;" vertex="1" parent="c_enroll_h">
+      <mxGeometry x="0" y="140" width="250" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="c_enroll_m" value="+ printInformation() : void" style="text;strokeColor=none;fillColor=#faf5ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="c_enroll_h">
+      <mxGeometry x="0" y="150" width="250" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- RELATIONSHIPS (Class Diagram) -->
+    <!-- ============================================================ -->
+
+    <!-- Course --> Professor (association) -->
+    <mxCell id="rel_course_prof" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#9673a6;strokeWidth=2;" edge="1" source="c_course_h" target="c_prof_h" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_course_prof_lbl" value="uses" style="edgeLabel;fontSize=10;fontColor=#9673a6;" vertex="1" connectable="0" parent="rel_course_prof">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- Course --> School (association) -->
+    <mxCell id="rel_course_school" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d6b656;strokeWidth=2;" edge="1" source="c_course_h" target="c_school_h" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_course_school_lbl" value="belongs to" style="edgeLabel;fontSize=10;fontColor=#d6b656;" vertex="1" connectable="0" parent="rel_course_school">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- Enrollment --> Student (association) -->
+    <mxCell id="rel_enroll_student" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="c_enroll_h" target="c_student_h" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_enroll_student_lbl" value="enrolls" style="edgeLabel;fontSize=10;fontColor=#6c8ebf;" vertex="1" connectable="0" parent="rel_enroll_student">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- Enrollment --> Course -->
+    <mxCell id="rel_enroll_course" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#9673a6;strokeWidth=2;" edge="1" source="c_enroll_h" target="c_course_h" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_enroll_course_lbl" value="in course" style="edgeLabel;fontSize=10;fontColor=#9673a6;" vertex="1" connectable="0" parent="rel_enroll_course">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- Enrollment --> Classroom -->
+    <mxCell id="rel_enroll_class" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#b85450;strokeWidth=2;" edge="1" source="c_enroll_h" target="c_class_h" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_enroll_class_lbl" value="in room" style="edgeLabel;fontSize=10;fontColor=#b85450;" vertex="1" connectable="0" parent="rel_enroll_class">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- SEPARATOR -->
+    <!-- ============================================================ -->
+    <mxCell id="sep" value="" style="line;strokeColor=#aaaaaa;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="680" width="1100" height="10" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- LABEL: OBJECT DIAGRAM -->
+    <!-- ============================================================ -->
+    <mxCell id="label_obj" value="📗 DIAGRAMA DE OBJETOS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1e3a5f;" vertex="1" parent="1">
+      <mxGeometry x="40" y="700" width="380" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT: student1 : Student -->
+    <!-- ============================================================ -->
+    <mxCell id="o_student" value="student1 : Student" style="swimlane;startSize=30;fontStyle=5;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1e3a5f;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="760" width="220" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="o_student_v" value="id = 1&#xa;firstName = &quot;Ana&quot;&#xa;lastName = &quot;García&quot;&#xa;email = &quot;ana@school.com&quot;&#xa;status = true" style="text;strokeColor=none;fillColor=#eff8ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="o_student">
+      <mxGeometry x="0" y="30" width="220" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT: prof1 : Professor -->
+    <!-- ============================================================ -->
+    <mxCell id="o_prof" value="prof1 : Professor" style="swimlane;startSize=30;fontStyle=5;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a3d1a;align=center;" vertex="1" parent="1">
+      <mxGeometry x="300" y="760" width="230" height="170" as="geometry" />
+    </mxCell>
+    <mxCell id="o_prof_v" value="id = 10&#xa;firstName = &quot;Carlos&quot;&#xa;lastName = &quot;Ramírez&quot;&#xa;email = &quot;carlos@school.com&quot;&#xa;specialty = &quot;Mathematics&quot;&#xa;status = true" style="text;strokeColor=none;fillColor=#f0faf0;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="o_prof">
+      <mxGeometry x="0" y="30" width="230" height="130" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT: school1 : School -->
+    <!-- ============================================================ -->
+    <mxCell id="o_school" value="school1 : School" style="swimlane;startSize=30;fontStyle=5;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#3d2e00;align=center;" vertex="1" parent="1">
+      <mxGeometry x="570" y="760" width="220" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="o_school_v" value="id = 5&#xa;name = &quot;Central High School&quot;&#xa;director = &quot;Laura Pérez&quot;" style="text;strokeColor=none;fillColor=#fffef0;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="o_school">
+      <mxGeometry x="0" y="30" width="220" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT: room1 : Classroom -->
+    <!-- ============================================================ -->
+    <mxCell id="o_class" value="room1 : Classroom" style="swimlane;startSize=30;fontStyle=5;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#3d0000;align=center;" vertex="1" parent="1">
+      <mxGeometry x="830" y="760" width="220" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="o_class_v" value="id = 3&#xa;roomNumber = 201&#xa;floor = 2&#xa;capacity = 30&#xa;status = true" style="text;strokeColor=none;fillColor=#fff5f5;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="o_class">
+      <mxGeometry x="0" y="30" width="220" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT: course1 : Course -->
+    <!-- ============================================================ -->
+    <mxCell id="o_course" value="course1 : Course" style="swimlane;startSize=30;fontStyle=5;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#2d0045;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="960" width="250" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="o_course_v" value="id = 20&#xa;name = &quot;Algebra I&quot;&#xa;programName = &quot;Sciences&quot;&#xa;school = school1&#xa;professor = prof1&#xa;startDate = 2025-01-15&#xa;endDate = 2025-06-15" style="text;strokeColor=none;fillColor=#f9f5ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="o_course">
+      <mxGeometry x="0" y="30" width="250" height="140" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT: enroll1 : Enrollment -->
+    <!-- ============================================================ -->
+    <mxCell id="o_enroll" value="enroll1 : Enrollment" style="swimlane;startSize=30;fontStyle=5;fontSize=12;fillColor=#f0e6ff;strokeColor=#6f42c1;fontColor=#2d0060;align=center;" vertex="1" parent="1">
+      <mxGeometry x="340" y="960" width="250" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="o_enroll_v" value="id = 100&#xa;enrollmentDate = 2025-01-10&#xa;student = student1&#xa;course = course1&#xa;classroom = room1&#xa;status = true" style="text;strokeColor=none;fillColor=#faf5ff;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" vertex="1" parent="o_enroll">
+      <mxGeometry x="0" y="30" width="250" height="140" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- OBJECT LINKS -->
+    <!-- ============================================================ -->
+
+    <!-- enroll1 --> student1 -->
+    <mxCell id="orel_e_s" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#6c8ebf;strokeWidth=1.5;dashed=1;" edge="1" source="o_enroll" target="o_student" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="orel_e_s_lbl" value="student" style="edgeLabel;fontSize=10;fontColor=#6c8ebf;" vertex="1" connectable="0" parent="orel_e_s">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- enroll1 --> course1 -->
+    <mxCell id="orel_e_c" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#9673a6;strokeWidth=1.5;dashed=1;" edge="1" source="o_enroll" target="o_course" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="orel_e_c_lbl" value="course" style="edgeLabel;fontSize=10;fontColor=#9673a6;" vertex="1" connectable="0" parent="orel_e_c">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- enroll1 --> room1 -->
+    <mxCell id="orel_e_r" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#b85450;strokeWidth=1.5;dashed=1;" edge="1" source="o_enroll" target="o_class" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="orel_e_r_lbl" value="classroom" style="edgeLabel;fontSize=10;fontColor=#b85450;" vertex="1" connectable="0" parent="orel_e_r">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- course1 --> prof1 -->
+    <mxCell id="orel_c_p" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#82b366;strokeWidth=1.5;dashed=1;" edge="1" source="o_course" target="o_prof" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="orel_c_p_lbl" value="professor" style="edgeLabel;fontSize=10;fontColor=#82b366;" vertex="1" connectable="0" parent="orel_c_p">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+    <!-- course1 --> school1 -->
+    <mxCell id="orel_c_s" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d6b656;strokeWidth=1.5;dashed=1;" edge="1" source="o_course" target="o_school" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="orel_c_s_lbl" value="school" style="edgeLabel;fontSize=10;fontColor=#d6b656;" vertex="1" connectable="0" parent="orel_c_s">
+      <mxGeometry relative="0.5" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
